@@ -2072,8 +2072,8 @@ input, select, textarea {
 			font-weight: 600;
 			border-radius: 8px;
 			color: #fff;
-			height: 2.5em;
-			line-height: 2.5em;
+			height: auto;
+			line-height: auto;
 			padding: 0 1.25em;
 		}
 
