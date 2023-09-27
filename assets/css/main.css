@@ -2045,7 +2045,7 @@ input, select, textarea {
 		z-index: 10000;
 		cursor: default;
 		height: auto;
-		line-height: 3.5em;
+		line-height: auto;
 	}
 
 		#nav ul {
