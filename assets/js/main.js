@@ -32,3 +32,32 @@
 		});
 
 })(jQuery);
+
+
+
+
+
+function handleNavbarHighlighting() {
+    // Get all the sections on the page
+    const sections = document.querySelectorAll("section");
+
+    // Iterate over each section to determine if it's in the viewport
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 50; // Adjusted for a better visual effect
+        const sectionBottom = sectionTop + section.clientHeight;
+
+        // Check if the current section is in the viewport
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+            // Remove the 'active' class from all navbar links
+            document.querySelectorAll("nav a").forEach((link) => {
+                link.classList.remove("active");
+            });
+
+            // Add the 'active' class to the corresponding navbar link
+            const correspondingNavLink = document.querySelector(`nav a[href="#${section.id}"]`);
+            if (correspondingNavLink) {
+                correspondingNavLink.classList.add("active");
+            }
+        }
+    });
+}
